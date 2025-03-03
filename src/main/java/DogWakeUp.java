@@ -2,10 +2,10 @@ public class DogWakeUp {
 
     public static boolean shouldWakeUp(boolean barking, int hourOfDay) {
         if (hourOfDay < 0 || hourOfDay > 23) {
-            return false; // Geçersiz saat
+            return false;
         }
         if (barking && (hourOfDay >= 8 && hourOfDay <= 23)) {
-            return false; // Gündüz havlayan köpeğe tepki verilmez
+            return false;
         }
         return barking && (hourOfDay >= 0 && hourOfDay < 8);
     }
